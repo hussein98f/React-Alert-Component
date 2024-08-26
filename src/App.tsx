@@ -1,35 +1,74 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Alert from "./component/Alert";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+      <Alert type={"error"} title={"Hello World"}>
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
+          eligendi nesciunt accusantium dignissimos nobis quia veniam, molestiae
+          ex earum, expedita ab <strong> cumque maiores voluptates </strong>
+          aliquid similique atque sed.&nbsp;
+          <a href="#" target="_blank">
+            Deleniti
+          </a>
+          , aliquid.
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      </Alert>
+
+      <Alert type={"note"} title={"Hello World"}>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
+          eligendi nesciunt accusantium dignissimos nobis quia veniam, molestiae
+          ex earum, expedita ab <strong> cumque maiores voluptates </strong>
+          aliquid similique atque sed.&nbsp;
+          <a href="#" target="_blank">
+            Deleniti
+          </a>
+          , aliquid.
+        </p>
+      </Alert>
+
+      <Alert type={"sucssus"} title={"Hello World"}>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
+          eligendi nesciunt accusantium dignissimos nobis quia veniam, molestiae
+          ex earum, expedita ab <strong> cumque maiores voluptates </strong>
+          aliquid similique atque sed.&nbsp;
+          <a href="#" target="_blank">
+            Deleniti
+          </a>
+          , aliquid.
+        </p>
+      </Alert>
+
+      <Alert type={"upgrade"} title={"Hello World"}>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
+          eligendi nesciunt accusantium dignissimos nobis quia veniam, molestiae
+          ex earum, expedita ab <strong> cumque maiores voluptates </strong>
+          aliquid similique atque sed.&nbsp;
+          <a href="#" target="_blank">
+            Deleniti
+          </a>
+          , aliquid.
+        </p>
+      </Alert>
+
+      <Alert type={"warning"} title={"Hello World"}>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
+          eligendi nesciunt accusantium dignissimos nobis quia veniam, molestiae
+          ex earum, expedita ab <strong> cumque maiores voluptates </strong>
+          aliquid similique atque sed.&nbsp;
+          <a href="#" target="_blank">
+            Deleniti
+          </a>
+          , aliquid.
+        </p>
+      </Alert>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

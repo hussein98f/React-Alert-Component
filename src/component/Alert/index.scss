@@ -1,0 +1,66 @@
+// Alert Color Varibles
+$upgradeColor: #dddddd;
+$noteColor: #5b79ce;
+$errorColor: #c76262;
+$sucssusColor: #38c294;
+$warningColor: #bb9a44;
+
+.alert-wrapper {
+  margin: 20px 0;
+  padding: 25px;
+  border-radius: 12px;
+  .alert-heade {
+    justify-content: space-between;
+    display: flex;
+    align-items: start;
+    svg {
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+    h4 {
+      margin: 0 7px;
+      font-size: 1.5rem;
+    }
+    div {
+      display: flex;
+      align-items: center;
+      svg {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  .alert-body {
+    width: 100%;
+    padding: 0 2px;
+    margin-top: 7px;
+    font-size: 1.1rem;
+    strong {
+      font-weight: 600;
+    }
+    a {
+      font-weight: 500;
+    }
+  }
+}
+
+@mixin alert-types-color($type, $mainColor) {
+  .alert-wrapper.#{$type} {
+    border: 2px dotted darken($mainColor, 20%);
+    background-color: transparentize($mainColor, 0.85);
+    color: lighten($mainColor, 18%);
+    a {
+      color: $mainColor;
+    }
+    .alert-heade {
+      h4 {
+        color: $mainColor;
+      }
+    }
+  }
+}
+
+@include alert-types-color("upgrade", $upgradeColor);
+@include alert-types-color("note", $noteColor);
+@include alert-types-color("error", $errorColor);
+@include alert-types-color("sucssus", $sucssusColor);
+@include alert-types-color("warning", $warningColor);

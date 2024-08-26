@@ -1,50 +1,49 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite (React MultiType Alert Component)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a component created using React.js and is designed to be suitable for various uses and applications. You can benefit from it by downloading and using it. Here’s how to download and use it.
 
-Currently, two official plugins are available:
+Requirements:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Node-js](https://nodejs.org/en)
 
-## Expanding the ESLint configuration
+## Installation and Usage Instructions
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```echo~
+git clone https://github.com/hussein98f/React-Alert-Component.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+```echo~
+cd React-Alert-Component
+```
+
+```echo~
+yarn install
+```
+
+- You can use the item as follows:
 
 ```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+import Alert from "./component/Alert";
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+function App() {
+  return (
+    <>
+      type you can Choose Type (upgrade,note,error,sucssus,warning) Customize
+      your Title and Your body Content
+      <Alert type={"error"} title={"Hello World"}>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing .
+          <strong> cumque voluptates </strong>
+          aliquid similique atque sed.&nbsp;
+          <a href="#" target="_blank">
+            Deleniti
+          </a>
+          , aliquid.
+        </p>
+      </Alert>
+    </>
+  );
+}
+
+export default App;
 ```
